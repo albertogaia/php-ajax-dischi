@@ -17,11 +17,93 @@ include __DIR__ . '/utilities/database.php';
 </head>
 <body>
     <header class="header">
-        <div class="logo-img"></div>
-        <div class="selection"></div>
+        <div class="logo__img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Spotify_icon.png" alt="logo spotify">
+        </div>
+        <div class="selection">
+            <select name="selection__genre" id="selectionGenre">
+                <option value="All">All</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Metal">Metal</option>
+            </select>
+        </div>
     </header>
     <main class="main">
         <div class="container">
+            <div class="card">
+                <div class="card__img">
+                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                </div>
+                <div class="card__info">
+                    <div class="card__title"><h3>New Jersey</h3></div>
+                    <div class="card__author">
+                        <h4>Bon Jovi</h4>
+                        <h4>1988</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__img">
+                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                </div>
+                <div class="card__info">
+                    <div class="card__title"><h3>New Jersey</h3></div>
+                    <div class="card__author">
+                        <h4>Bon Jovi</h4>
+                        <h4>1988</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__img">
+                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                </div>
+                <div class="card__info">
+                    <div class="card__title"><h3>New Jersey</h3></div>
+                    <div class="card__author">
+                        <h4>Bon Jovi</h4>
+                        <h4>1988</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__img">
+                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                </div>
+                <div class="card__info">
+                    <div class="card__title"><h3>New Jersey</h3></div>
+                    <div class="card__author">
+                        <h4>Bon Jovi</h4>
+                        <h4>1988</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__img">
+                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                </div>
+                <div class="card__info">
+                    <div class="card__title"><h3>New Jersey</h3></div>
+                    <div class="card__author">
+                        <h4>Bon Jovi</h4>
+                        <h4>1988</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__img">
+                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                </div>
+                <div class="card__info">
+                    <div class="card__title"><h3>New Jersey</h3></div>
+                    <div class="card__author">
+                        <h4>Bon Jovi</h4>
+                        <h4>1988</h4>
+                    </div>
+                </div>
+            </div>
             <div class="card">
                 <div class="card__img">
                     <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">

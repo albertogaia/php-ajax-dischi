@@ -9,6 +9,7 @@
     --backgroundColor: #1E2D3B;
     --titleText: white;
     --descriptionText: #777;
+    --heightHeader: 80px;
 }
 
 
@@ -24,14 +25,66 @@ body {
 
 /* HEADER */
 
+header {
+    height: var(--heightHeader);
+    width: 100%;
+    background-color: var(--mainColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.logo__img {
+    width: 60px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo__img img {
+    width: 100%;
+}
+
+.selection {
+    width: 200px;
+    height: 40px;
+}
+
+.selection select {
+    outline: none;
+    background-color: var(--backgroundColor);
+    border: none;
+    color: var(--titleText);
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
 
 /* FINE HEADER */
 
 
 /* MAIN */
 
+.main {
+    min-height: calc(100vh - var(--heightHeader));
+    padding: 20px 0;
+    background-color: var(--backgroundColor);
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .card {
-    max-width: 250px;
+    width: calc(100% / 5 - 20px);
+    margin: 10px;
+    min-width: 250px;
     height: 350px;
     display: flex;
     flex-direction: column;
