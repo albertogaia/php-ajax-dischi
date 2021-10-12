@@ -12,13 +12,21 @@ include __DIR__ . '/utilities/database.php';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <title>PHP Ajax Dischi</title>
 </head>
-<body>
+<body class="dark-theme">
     <header class="header">
         <div class="logo__img">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Spotify_icon.png" alt="logo spotify">
+        </div>
+        <div class="toggle">
+            <span>Dark</span>
+            <div class="theme-toggle">
+                <div class="toggle__circle"></div>
+            </div>
+            <span>Light</span>
         </div>
         <div class="selection">
             <select name="selection__genre" id="selectionGenre">
@@ -40,7 +48,7 @@ include __DIR__ . '/utilities/database.php';
                         <img src={$song['poster']} alt='poster {$song['title']}'>
                     </div>
                     <div class='card__info'>
-                        <div class='card__title'><h3>{$song['title']}</h3></div>
+                        <div class='card__title'><h3>".strtoupper($song['title'])."</h3></div>
                         <div class='card__author'>
                             <h4>{$song['author']}</h4>
                             <h4>{$song['year']}</h4>
