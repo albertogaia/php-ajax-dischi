@@ -63,6 +63,10 @@ header {
     align-items: center;
 }
 
+.toggle__text {
+    color: var(--toggle);
+}
+
 .theme-toggle {
     display: inline-block;
     width: 70px;

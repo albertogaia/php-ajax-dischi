@@ -21,13 +21,6 @@ include __DIR__ . '/utilities/database.php';
         <div class="logo__img">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Spotify_icon.png" alt="logo spotify">
         </div>
-        <div class="toggle">
-            <span>Dark</span>
-            <div class="theme-toggle">
-                <div class="toggle__circle"></div>
-            </div>
-            <span>Light</span>
-        </div>
         <div class="selection">
             <select name="selection__genre" id="selectionGenre">
                 <option value="All">All</option>
@@ -36,6 +29,13 @@ include __DIR__ . '/utilities/database.php';
                 <option value="Jazz">Jazz</option>
                 <option value="Metal">Metal</option>
             </select>
+        </div>
+        <div class="toggle">
+            <span class="toggle__text">Dark</span>
+            <div class="theme-toggle">
+                <div class="toggle__circle"></div>
+            </div>
+            <span class="toggle__text">Light</span>
         </div>
     </header>
     <main class="main">
