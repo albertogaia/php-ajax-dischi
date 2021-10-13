@@ -20,12 +20,9 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Spotify_icon.png" alt="logo spotify">
             </div>
             <div class="selection">
-                <select name="selection__genre" id="selectionGenre">
-                    <option value="All">All</option>
-                    <option value="Rock">Rock</option>
-                    <option value="Pop">Pop</option>
-                    <option value="Jazz">Jazz</option>
-                    <option value="Metal">Metal</option>
+                <select name="selection__genre" id="selectionGenre" v-model="genreSelected" @change="getFilteredList">
+                    <option value="all" selected>Tutti</option>
+                    <option :value="genre" v-for="(genre, index) in genres" :key="index">{{genre}}</option>
                 </select>
             </div>
             <div class="toggle">
@@ -38,7 +35,7 @@
         </header>
         <main class="main">
             <div class="container">
-                <div class='card' v-for="(song, index) in songs" :key="index">
+                <div class='card' v-for="(song, index) in filteredGenre" :key="index">
                     <div class='card__img'>
                         <img :src="song.poster" :alt="song.title">
                     </div>
