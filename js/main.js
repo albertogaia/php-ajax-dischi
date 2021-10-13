@@ -3,7 +3,7 @@ Vue.config.devtools = true;
 const app = new Vue({
     el : '#app',
     data: {
-        url: 'http://localhost:8888/ESERCITAZIONI/php-ajax-dischi/utilities/API/server.php',
+        url: 'utilities/API/server.php',
         songs: [],
         genres:[],
         genreSelected: localStorage.getItem('genre-selected') || '',
