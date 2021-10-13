@@ -13,8 +13,8 @@
     <title>Vue Dischi PHP</title>
 </head>
 
-<body class="dark-theme">
-    <div id="app" class="dark-theme">
+<body>
+    <div id="app" :class="currentTheme">
         <header class="header">
             <div class="logo__img">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Spotify_icon.png" alt="logo spotify">
@@ -27,8 +27,8 @@
             </div>
             <div class="toggle">
                 <span class="toggle__text">Dark</span>
-                <div class="theme-toggle">
-                    <div class="toggle__circle"></div>
+                <div class="theme-toggle" @click="changeTheme">
+                    <div class="toggle__circle" :class="(currentTheme=='light-theme') ? 'active' : null"></div>
                 </div>
                 <span class="toggle__text">Light</span>
             </div>
