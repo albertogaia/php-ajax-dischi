@@ -13,11 +13,12 @@ const app = new Vue({
     methods: {
         getFilteredList(){
             const storedGenre = localStorage.getItem('genre-selected');
+
             if(this.genreSelected == 'all'){
                 this.filteredGenre = this.songs;
                 localStorage.setItem('genre-selected', 'all');
                 this.genreSelected = localStorage.getItem('genre-selected');
-            }else{
+            } else{
                 this.filteredGenre = this.songs.filter(song=>{
                     if(song.genre == this.genreSelected){
                         return song;
@@ -39,6 +40,7 @@ const app = new Vue({
             }
         }
     },
+    
     created() {
         axios
             .get(this.url)
@@ -51,7 +53,5 @@ const app = new Vue({
                 this.getFilteredList()
             })
           
-    },
-    mounted() {
     },
 })
