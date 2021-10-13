@@ -11,7 +11,7 @@
     --descriptionText: #777;
     --toggle: white;
     --heightHeader: 80px;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .light-theme {
@@ -21,7 +21,7 @@
     --descriptionText: #777;
     --toggle: #555;
     --heightHeader: 80px;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 
@@ -94,7 +94,7 @@ header {
     filter: drop-shadow(2px 2px 2px var(--descriptionText));
 }
 
-.light-theme .toggle__circle {
+.toggle__circle.active {
     transform: translateX(70%);
 }
 
@@ -181,9 +181,3 @@ header {
 
 
 /* FINE MAIN */
-
-
-/* FOOTER */
-
-
-/* FINE FOOTER */
