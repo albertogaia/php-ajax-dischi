@@ -6,27 +6,34 @@ const app = new Vue({
         url: 'utilities/API/server.php',
         songs: [],
         genres:[],
-        genreSelected: localStorage.getItem('genre-selected') || '',
+        genreSelected: localStorage.getItem('genre-selected') || 'all',
         filteredGenre: [],
         currentTheme: localStorage.getItem('theme-color') || 'dark-theme',
     },
     methods: {
-        getFilteredList(){
-            const storedGenre = localStorage.getItem('genre-selected');
+        // getFilteredList(){
+        //     const storedGenre = localStorage.getItem('genre-selected');
 
-            if(this.genreSelected == 'all'){
-                this.filteredGenre = this.songs;
-                localStorage.setItem('genre-selected', 'all');
-                this.genreSelected = localStorage.getItem('genre-selected');
-            } else{
-                this.filteredGenre = this.songs.filter(song=>{
-                    if(song.genre == this.genreSelected){
-                        return song;
-                    }
-                    localStorage.setItem('genre-selected', this.genreSelected);
-                    this.genreSelected = localStorage.getItem('genre-selected');
+        //     if(this.genreSelected == 'all'){
+        //         this.filteredGenre = this.songs;
+        //         localStorage.setItem('genre-selected', 'all');
+        //         this.genreSelected = localStorage.getItem('genre-selected');
+        //     } else{
+        //         this.filteredGenre = this.songs.filter(song=>{
+        //             if(song.genre == this.genreSelected){
+        //                 return song;
+        //             }
+        //             localStorage.setItem('genre-selected', this.genreSelected);
+        //             this.genreSelected = localStorage.getItem('genre-selected');
+        //         })
+        //     }
+        // },
+        getGenre(){
+            axios
+                .get(this.url + '?genere=' + this.genreSelected)
+                .then(res => {
+                    this.filteredGenre = res.data;
                 })
-            }
         },
 
         changeTheme(){
@@ -49,7 +56,7 @@ const app = new Vue({
                 for(let i = 0; i < res.data.length; i++){
                     !this.genres.includes(res.data[i].genre) ? this.genres.push(res.data[i].genre) : null
                 }
-                this.getFilteredList()
+                this.getGenre()
             })
           
     },
