@@ -21,9 +21,9 @@
                         alt="logo spotify"></a>
             </div>
             <div class="selection">
-                <select name="selection__genre" id="selectionGenre" v-model="genreSelected" @change="getFilteredList">
-                    <option value="all" selected>Tutti</option>
-                    <option :value="genre" v-for="(genre, index) in genres" :key="index">{{genre}}</option>
+                <select name='selection__genre' id='selectionGenre' v-model='genreSelected' @change='getFilteredList'>
+                    <option value='all' selected>Tutti</option>
+                    <option :value='genre' v-for='(genre, index) in genres' :key='index' :name='genre'>{{genre}}</option>
                 </select>
             </div>
             <div class="toggle">

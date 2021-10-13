@@ -4,14 +4,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --heightHeader: 80px;
+}
+
 .dark-theme {
     --mainColor: #33404D;
     --backgroundColor: #1E2D3B;
     --titleText: white;
     --descriptionText: #777;
     --toggle: white;
-    --heightHeader: 80px;
-    transition: 1s;
 }
 
 .light-theme {
@@ -20,8 +22,6 @@
     --titleText: rgb(0, 0, 0);
     --descriptionText: #777;
     --toggle: #555;
-    --heightHeader: 80px;
-    transition: 1s;
 }
 
 
