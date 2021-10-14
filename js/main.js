@@ -4,34 +4,18 @@ const app = new Vue({
     el : '#app',
     data: {
         url: 'utilities/API/server.php',
-        songs: [],
         genres:[],
-        genreSelected: localStorage.getItem('genre-selected') || 'all',
+        genreSelected: '',
         filteredGenre: [],
         currentTheme: localStorage.getItem('theme-color') || 'dark-theme',
     },
-    methods: {
-        // getFilteredList(){
-        //     const storedGenre = localStorage.getItem('genre-selected');
 
-        //     if(this.genreSelected == 'all'){
-        //         this.filteredGenre = this.songs;
-        //         localStorage.setItem('genre-selected', 'all');
-        //         this.genreSelected = localStorage.getItem('genre-selected');
-        //     } else{
-        //         this.filteredGenre = this.songs.filter(song=>{
-        //             if(song.genre == this.genreSelected){
-        //                 return song;
-        //             }
-        //             localStorage.setItem('genre-selected', this.genreSelected);
-        //             this.genreSelected = localStorage.getItem('genre-selected');
-        //         })
-        //     }
-        // },
+    methods: {
         getGenre(){
             axios
                 .get(this.url + '?genere=' + this.genreSelected)
                 .then(res => {
+                    // console.log('NUOVA CHIAMATA')
                     this.filteredGenre = res.data;
                 })
         },
@@ -52,7 +36,7 @@ const app = new Vue({
         axios
             .get(this.url)
             .then(res=>{
-                this.songs = res.data;
+
                 for(let i = 0; i < res.data.length; i++){
                     !this.genres.includes(res.data[i].genre) ? this.genres.push(res.data[i].genre) : null
                 }
